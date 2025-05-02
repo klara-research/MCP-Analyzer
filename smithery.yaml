@@ -1,0 +1,38 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      lines:
+        type: number
+        default: 100
+        description: Number of lines to read from each log file
+      filter:
+        type: string
+        default: ""
+        description: Text to filter log entries (case-insensitive)
+      customPath:
+        type: string
+        default: ""
+        description: Custom path to log directory
+      fileLimit:
+        type: number
+        default: 5
+        description: Maximum number of files per page
+      page:
+        type: number
+        default: 1
+        description: Page number for pagination
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['build/index.js'] })
+  exampleConfig:
+    lines: 50
+    filter: error
+    customPath: /var/log
+    fileLimit: 5
+    page: 1
