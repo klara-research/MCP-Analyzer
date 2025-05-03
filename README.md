@@ -1,5 +1,7 @@
 # MCP Server: Analyze & Debug MCP Logs
 
+[![smithery badge](https://smithery.ai/badge/@klara-research/MCP-Analyzer)](https://smithery.ai/server/@klara-research/MCP-Analyzer)
+
 <div align="center">
   <img src="assets/mcp_logs.png" width="400">
   
@@ -25,6 +27,16 @@ MCP Log Reader is a specialized MCP server that helps you analyze and debug Mode
 - **Seamless Claude Integration**: Works directly with Claude Desktop
 
 ## 🚀 Quick Start
+
+### Installing via Smithery
+
+To install MCP Log Reader for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@klara-research/MCP-Analyzer):
+
+```bash
+npx -y @smithery/cli install @klara-research/MCP-Analyzer --client claude
+```
+
+### Installing Manually
 
 Install directly from GitHub:
 ```bash
